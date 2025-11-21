@@ -1,0 +1,28 @@
+/**
+* File: Lab 12
+* Class: CSCI 1302
+* Author: Arham Sawal, KK Chekwas, Anthony Santiago
+* Created on: Nov 21, 2025
+* Last Modified: Nov 21, 2025
+* Description: copy and modify your existing recursive solution so that uses a helper method to avoid creating a new String every time a recursive call happens.
+*/
+
+public class Lab12Prob03 {
+	public static void main(String[] args) {
+		System.out.println(reverseString("Arham"));
+	}
+
+	public static String reverseString(String s) {
+		return reverseString(s, s.length() - 1);
+	}
+
+	public static String reverseString(String s, int current) {
+		char c = s.charAt(current);
+		if (current < 1) {
+			return c + "";
+		} else {
+			return c + reverseString(s, current - 1);
+		}
+	}
+
+}
