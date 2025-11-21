@@ -1,0 +1,24 @@
+/**
+* File: Lab 12
+* Class: CSCI 1302
+* Author: Arham Sawal, KK Chekwas, Anthony Santiago
+* Created on: Nov 21, 2025
+* Last Modified: Nov 21, 2025
+* Description: Create a recursive method that reverses a given String and returns the reversed version of that String
+*/
+
+public class Lab12Prob02 {
+	public static void main(String[] args) {
+		System.out.println(reverseString("Arham"));
+	}
+
+	public static String reverseString(String s) {
+		char lastChar = s.charAt(s.length() - 1);
+		if (s.length() < 2) {
+			return s;
+		} else {
+			return lastChar + reverseString(s.substring(0, s.length() - 1));
+		}
+	}
+
+}
